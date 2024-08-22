@@ -243,19 +243,19 @@
 				font-size: 24px;
 				text-align: center;
 			}
-
+			.grid .info{
+				text-align: center;
+			}
 		}
 
 		.grid-template-areas-2 {
 			grid-template:
-					"title title title title" auto
-					"info info hero-image hero-image"
+					"title title hero-image hero-image" auto
+					"info info info info"
 					/ 40% 25% 10% 25%;
 			row-gap: 20px;
 		}
-		.grid-template-areas-2 h2 {
-			text-align: start;
-		}
+
 		@media (min-width: 510px) {
 			.grid-template-areas-2 {
 				grid-template:
@@ -272,11 +272,11 @@
 	<header>
 		<div class="logo">
 			<span class="logo-icon">🧵</span>
-			Bordados Pet Realista | Clara Souza
+			Ateliê Clara Souza
 		</div>
 		<nav>
 			<a href="#">Home</a>
-			<a href="https://www.instagram.com/atelieclarasouza/">Instagram</a>
+			<a href="https://www.instagram.com/atelieclarasouza/" target="_blank">Instagram</a>
 			<a href="#instrucoes">Instruções</a>
 			<a href="#portfolio">Portifólio</a>
 		</nav>
@@ -284,7 +284,7 @@
 	<section class="hero d-block">
 		<div class="grid grid-template-areas-2">
 			<div class="title">
-				<h1>Eternizo seu pet através do bordado 🪡🐶🐈</h1>
+				<h1>Bordados Pet Realista </h1>
 			</div>
 			<div class="hero-image">
 				<img src="images/perfil.jpg" alt="Clara Souza em seu ateliê">
@@ -294,6 +294,7 @@
 				</div>
 			</div>
 			<div class="info">
+				<h1>Eternizo seu pet através do bordado 🪡🐶🐈</h1>
 				<h2>Envio para todo o Brasil 💌</h2>
 				<a href="http://wa.me/55012981036664?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" target="_blank" class="btn">
 					<img src="images/whatsapp.png" class="whatsapp-logo" alt="whatsapp-logo" />
