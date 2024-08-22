@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Bordados Pet Realista | Clara Souza</title>
+	<style>
+		html {
+			scroll-behavior: smooth;
+		}
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f5efe6;
+			color: #8b5e3c;
+		}
+		.container {
+			width: 90%;
+			max-width: 1200px;
+			margin: auto;
+			padding: 20px;
+		}
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 20px 0;
+		}
+		.logo {
+			display: flex;
+			align-items: center;
+			font-size: 24px;
+			font-weight: bold;
+		}
+		.logo-icon {
+			margin-right: 10px;
+			font-size: 28px;
+		}
+		nav a {
+			margin-left: 20px;
+			text-decoration: none;
+			color: #8b5e3c;
+		}
+		.hero {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			padding: 50px 0;
+		}
+		.hero-content {
+			width: 50%;
+		}
+		.hero-image {
+			width: 45%;
+			position: relative;
+		}
+		.hero-image img {
+			width: 100%;
+			border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+		.hero-image img:hover {
+			transform: scale(1.05);
+		}
+		.hero h1 {
+			font-size: 48px;
+			margin-bottom: 20px;
+		}
+		.hero p {
+			margin-bottom: 30px;
+		}
+		.btn {
+			display: inline-flex;
+			background-color: #ffffff;
+			color: #8b5e3c;
+			padding: 10px 20px;
+			text-decoration: none;
+			border-radius: 25px;
+			align-items: center;
+		}
+		.decorative-shapes {
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			z-index: -1;
+		}
+		.shape {
+			position: absolute;
+			border: 2px solid #ffffff;
+			border-radius: 50%;
+		}
+		.shape-1 {
+			width: 100px;
+			height: 100px;
+			top: -20px;
+			left: -20px;
+		}
+		.shape-2 {
+			width: 60px;
+			height: 60px;
+			bottom: 20px;
+			right: -10px;
+		}
+		.whatsapp-logo{
+			width: 30px;
+			margin-right: 5px;
+		}
+
+		.instrucoes {
+			padding: 50px 0;
+		}
+
+		.instrucoes h2 {
+			text-align: center;
+			margin-bottom: 30px;
+			color: #8b5e3c;
+		}
+
+		.instrucoes-grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 30px;
+		}
+
+		.instrucao-item {
+			background-color: #fff;
+			padding: 30px;
+			border-radius: 10px;
+			box-shadow: 0 0 20px rgba(0,0,0,0.1);
+		}
+
+		.instrucao-item h3 {
+			color: #8b5e3c;
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.instrucao-item h4 {
+			color: #8b5e3c;
+			margin-top: 15px;
+			margin-bottom: 10px;
+		}
+
+		.instrucao-item p {
+			margin-bottom: 15px;
+		}
+
+		.instrucao-item ol {
+			padding-left: 20px;
+		}
+
+		.instrucao-item li {
+			margin-bottom: 10px;
+		}
+
+		.portfolio {
+			padding: 50px 0;
+		}
+
+		.portfolio h2 {
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.portfolio-grid {
+			display: grid;
+			grid-template-columns: repeat(3, 1fr);
+			gap: 20px;
+		}
+
+		.portfolio-item {
+			overflow: hidden;
+			border-radius: 10px;
+			box-shadow: 0 0 10px rgba(0,0,0,0.1);
+		}
+
+		.portfolio-item img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: transform 0.3s ease;
+		}
+
+		.portfolio-item:hover img {
+			transform: scale(1.05);
+		}
+		.orcamento{
+			align-items: center;
+			vertical-align: middle;
+			display: flex;
+			justify-content: center;
+			height: 100px;
+		}
+
+		@media (max-width: 768px) {
+			.portfolio-grid {
+				grid-template-columns: repeat(2, 1fr);
+			}
+			.instrucoes-grid {
+				grid-template-columns: 1fr;
+			}
+			.hero-content {
+				width: 100%;
+				padding: 0 20px;
+			}
+			.hero h1 {
+				font-size: 36px;
+				text-align: center;
+			}
+			.hero h2 {
+				font-size: 24px;
+				text-align: center;
+			}
+		}
+
+		@media (max-width: 480px) {
+			.portfolio-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+	</style>
+</head>
+<body>
+<div class="container">
+	<header>
+		<div class="logo">
+			<span class="logo-icon">🧵</span>
+			Bordados Pet Realista | Clara Souza
+		</div>
+		<nav>
+			<a href="#">Home</a>
+			<a href="https://www.instagram.com/atelieclarasouza/">Instagram</a>
+			<a href="#instrucoes">Instruções</a>
+			<a href="#portfolio">Portifólio</a>
+		</nav>
+	</header>
+
+	<section class="hero">
+		<div class="hero-content">
+			<h1>Eternizo seu pet através do bordado 🪡🐶🐈</h1>
+			<h2>Envio para todo o Brasil 💌</h2>
+			<a href="http://wa.me/55012981036664?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" target="_blank" class="btn">
+				<img src="images/whatsapp.png" class="whatsapp-logo" alt="whatsapp-logo" />
+				<span> Faça um orçamento pelo Whatsapp</span>
+			</a>
+		</div>
+		<div class="hero-image">
+			<img src="images/perfil.jpg" alt="Clara Souza em seu ateliê">
+			<div class="decorative-shapes">
+				<div class="shape shape-1"></div>
+				<div class="shape shape-2"></div>
+			</div>
+		</div>
+	</section>
+	<section id="instrucoes" class="instrucoes">
+		<h2>Instruções para Pedidos</h2>
+		<div class="instrucoes-grid">
+			<div class="instrucao-item">
+				<h3>Escolha da Foto</h3>
+				<h4>Iluminação</h4>
+				<p>Luz natural sem sombras ou filtros, para que se possa visualizar as cores reais do seu pet.</p>
+				<h4>Ângulo</h4>
+				<p>A foto precisa ser tirada a nível dos olhos para que não se crie sombras ou não modifique os detalhes do seu pet.</p>
+				<h4>Qualidade da Imagem</h4>
+				<p>A foto precisa ter uma boa qualidade para que se possa dar zoom e visualizar os detalhes e cores do seu pet.</p>
+			</div>
+			<div class="instrucao-item">
+				<h3>Passos para Fazer o Pedido</h3>
+				<ol>
+					<li>Enviar uma mensagem no WhatsApp com a foto de referência do seu pet.</li>
+					<li>Ao entrar em contato, enviarei o orçamento do pet e os tamanhos disponíveis de bastidor. Aceitamos pagamento no PIX ou no cartão de crédito.</li>
+					<li>Envio de nome, CPF, endereço completo e email para fazer o contrato de prestação de serviço. Pagamento de 50% do valor (bordado + frete).</li>
+					<li>Ao ser confirmado o pagamento é só aguardar a encomenda em seu endereço.</li>
+				</ol>
+			</div>
+		</div>
+	</section>
+	<section class="orcamento">
+		<a href="http://wa.me/55012981036664?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" target="_blank" class="btn">
+			<img src="images/whatsapp.png" class="whatsapp-logo" alt="whatsapp-logo" />
+			<span> Faça um orçamento pelo Whatsapp</span>
+		</a>
+	</section>
+	<section id="portfolio" class="portfolio">
+		<h2>Portfólio</h2>
+		<div class="portfolio-grid">
+			<div class="portfolio-item">
+				<img src="images/bordado1.webp" alt="Bordado 1">
+			</div>
+			<div class="portfolio-item">
+				<img src="images/bordado2.webp" alt="Bordado 2">
+			</div>
+			<div class="portfolio-item">
+				<img src="images/bordado3.webp" alt="Bordado 3">
+			</div>
+			<div class="portfolio-item">
+				<img src="images/bordado4.webp" alt="Bordado 4">
+			</div>
+			<div class="portfolio-item">
+				<img src="images/bordado5.webp" alt="Bordado 5">
+			</div>
+			<div class="portfolio-item">
+				<img src="images/perfil.jpg" alt="Bordado 6">
+			</div>
+		</div>
+	</section>
+</div>
+</body>
+</html>
