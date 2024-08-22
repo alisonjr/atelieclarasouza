@@ -26,6 +26,8 @@
 			justify-content: space-between;
 			align-items: center;
 			padding: 20px 0;
+			row-gap: 10px;
+			flex-wrap: wrap;
 		}
 		.logo {
 			display: flex;
@@ -38,7 +40,7 @@
 			font-size: 28px;
 		}
 		nav a {
-			margin-left: 20px;
+			margin-left: 10px;
 			text-decoration: none;
 			color: #8b5e3c;
 		}
@@ -196,6 +198,32 @@
 			height: 100px;
 		}
 
+		.d-block{
+			display: block;
+		}
+
+		.grid {
+			display: grid;
+		}
+		.grid .title{
+			grid-area: title;
+			width: 100%;
+		}
+		.grid .info{
+			grid-area: info;
+			width: 100%;
+		}
+		.grid .hero-image {
+			width: 100%;
+			grid-area: hero-image;
+		}
+
+		@media (max-width: 480px) {
+			.portfolio-grid {
+				grid-template-columns: 1fr;
+			}
+		}
+
 		@media (max-width: 768px) {
 			.portfolio-grid {
 				grid-template-columns: repeat(2, 1fr);
@@ -215,13 +243,28 @@
 				font-size: 24px;
 				text-align: center;
 			}
+
 		}
 
-		@media (max-width: 480px) {
-			.portfolio-grid {
-				grid-template-columns: 1fr;
+		.grid-template-areas-2 {
+			grid-template:
+					"title title title title" auto
+					"info info hero-image hero-image"
+					/ 40% 25% 10% 25%;
+			row-gap: 20px;
+		}
+		.grid-template-areas-2 h2 {
+			text-align: start;
+		}
+		@media (min-width: 510px) {
+			.grid-template-areas-2 {
+				grid-template:
+			"title hero-image" auto
+			"info hero-image"
 			}
 		}
+
+
 	</style>
 </head>
 <body>
@@ -238,21 +281,24 @@
 			<a href="#portfolio">Portifólio</a>
 		</nav>
 	</header>
-
-	<section class="hero">
-		<div class="hero-content">
-			<h1>Eternizo seu pet através do bordado 🪡🐶🐈</h1>
-			<h2>Envio para todo o Brasil 💌</h2>
-			<a href="http://wa.me/55012981036664?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" target="_blank" class="btn">
-				<img src="images/whatsapp.png" class="whatsapp-logo" alt="whatsapp-logo" />
-				<span> Faça um orçamento pelo Whatsapp</span>
-			</a>
-		</div>
-		<div class="hero-image">
-			<img src="images/perfil.jpg" alt="Clara Souza em seu ateliê">
-			<div class="decorative-shapes">
-				<div class="shape shape-1"></div>
-				<div class="shape shape-2"></div>
+	<section class="hero d-block">
+		<div class="grid grid-template-areas-2">
+			<div class="title">
+				<h1>Eternizo seu pet através do bordado 🪡🐶🐈</h1>
+			</div>
+			<div class="hero-image">
+				<img src="images/perfil.jpg" alt="Clara Souza em seu ateliê">
+				<div class="decorative-shapes">
+					<div class="shape shape-1"></div>
+					<div class="shape shape-2"></div>
+				</div>
+			</div>
+			<div class="info">
+				<h2>Envio para todo o Brasil 💌</h2>
+				<a href="http://wa.me/55012981036664?text=Olá,%20gostaria%20de%20fazer%20um%20orçamento" target="_blank" class="btn">
+					<img src="images/whatsapp.png" class="whatsapp-logo" alt="whatsapp-logo" />
+					<span> Faça um orçamento pelo Whatsapp</span>
+				</a>
 			</div>
 		</div>
 	</section>
